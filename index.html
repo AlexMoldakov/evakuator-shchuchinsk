@@ -13,7 +13,6 @@
   "description": "Круглосуточная служба эвакуации автомобилей в Щучинске, Боровом, Бурабае и на трассе Астана — Кокшетау",
   "telephone": "+77755699970",
   "openingHours": "Mo-Su 00:00-24:00",
-  "priceRange": "от 6000 ₸",
   "areaServed": [
     {"@type": "City", "name": "Щучинск"},
     {"@type": "Place", "name": "Боровое (Бурабай)"},
@@ -194,26 +193,6 @@
   .zone b { display: block; font-size: 17px; margin-bottom: 4px; }
   .zone span { color: var(--ink-soft); font-size: 15px; }
 
-  /* Цены */
-  .price-table {
-    width: 100%; border-collapse: collapse; background: var(--surface);
-    border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
-    box-shadow: var(--shadow); font-size: 16px;
-  }
-  .price-table th, .price-table td { text-align: left; padding: 14px 18px; }
-  .price-table thead th {
-    font-size: 12px; text-transform: uppercase; letter-spacing: .1em;
-    color: var(--ink-faint); border-bottom: 2px solid var(--amber);
-    font-weight: 700;
-  }
-  .price-table tbody tr + tr td { border-top: 1px solid var(--line); }
-  .price-table td.num {
-    font-weight: 800; white-space: nowrap; font-variant-numeric: tabular-nums;
-    text-align: right;
-  }
-  .price-note { margin-top: 14px; font-size: 14px; color: var(--ink-faint); max-width: 40em; }
-  .table-scroll { overflow-x: auto; }
-
   /* Шаги — реальная последовательность вызова */
   .steps { display: grid; gap: 14px; grid-template-columns: 1fr; counter-reset: step; padding: 0; margin: 0; list-style: none; }
   @media (min-width: 640px) { .steps { grid-template-columns: repeat(3, 1fr); } }
@@ -343,23 +322,12 @@
     </section>
 
     <section id="ceny" aria-labelledby="ceny-h">
-      <h2 id="ceny-h">Цены</h2>
-      <p class="sub">Точную стоимость называем по телефону до выезда — она фиксируется и не растёт на месте.</p>
-      <div class="table-scroll">
-        <table class="price-table">
-          <thead>
-            <tr><th>Услуга</th><th style="text-align:right">Стоимость</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Легковой автомобиль по Щучинску</td><td class="num">от 6 000 ₸</td></tr>
-            <tr><td>Щучинск ↔ Боровое, Бурабай</td><td class="num">от 8 000 ₸</td></tr>
-            <tr><td>Кроссовер, внедорожник</td><td class="num">от 8 000 ₸</td></tr>
-            <tr><td>Трасса и межгород</td><td class="num">от 10 000 ₸ + 350 ₸/км</td></tr>
-            <tr><td>Вытащить из кювета, снега, грязи</td><td class="num">от 7 000 ₸</td></tr>
-          </tbody>
-        </table>
+      <h2 id="ceny-h">Сколько стоит</h2>
+      <p class="sub">Назовите по телефону, где вы и что с машиной — сразу скажем точную цену. Она фиксируется до выезда и не меняется на месте: никаких доплат за погрузку, ночное время или мороз.</p>
+      <div class="trust">
+        <div><span class="mark" aria-hidden="true"></span><div><b>Цена известна до выезда</b><span>Сказали 8 000 — заплатите 8 000. Сумма не вырастет, когда эвакуатор уже приехал.</span></div></div>
+        <div><span class="mark" aria-hidden="true"></span><div><b>Без скрытых доплат</b><span>Погрузка, разгрузка, ночь, мороз, ожидание — всё уже в цене.</span></div></div>
       </div>
-      <p class="price-note">Цена зависит от расстояния и состояния авто (на колёсах / после ДТП). Ночью и в мороз работаем по тем же тарифам.</p>
     </section>
 
     <section id="kak" aria-labelledby="kak-h">
@@ -375,8 +343,8 @@
     <section id="dover" aria-labelledby="dover-h">
       <h2 id="dover-h">Почему нам звонят повторно</h2>
       <div class="trust" style="margin-top:24px">
-        <div><span class="mark" aria-hidden="true"></span><div><b>Цена фиксируется по телефону</b><span>Назвали 8 000 — заплатите 8 000. Никаких «на месте дороже».</span></div></div>
         <div><span class="mark" aria-hidden="true"></span><div><b>Груз застрахован</b><span>Отвечаем за авто с момента погрузки до выгрузки.</span></div></div>
+        <div><span class="mark" aria-hidden="true"></span><div><b>Приезжаем, когда обещали</b><span>Назвали 20 минут — будем через 20. Не бросаем на трассе ждать «ещё чуть-чуть».</span></div></div>
         <div><span class="mark" aria-hidden="true"></span><div><b>Kaspi или наличные</b><span>Как удобно. Чек — по запросу.</span></div></div>
         <div><span class="mark" aria-hidden="true"></span><div><b>Знаем каждый съезд</b><span>Местная бригада: найдём вас по описанию «возле озера, за санаторием».</span></div></div>
       </div>
