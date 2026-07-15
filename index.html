@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preload" as="image" href="img/hero-night.webp" fetchpriority="high">
 <title>Эвакуатор Щучинск и Боровое — круглосуточно, подача от 20 минут</title>
 <meta name="description" content="Эвакуатор в Щучинске, Боровом и Бурабае — 24/7. Подача 20–35 минут, фиксированная цена по телефону, оплата Kaspi. Звоните: +7 775 569 9970">
 <script type="application/ld+json">
@@ -135,7 +136,24 @@
   }
 
   /* ── Герой ── */
-  .hero { padding: 40px 0 44px; }
+  .hero-bleed {
+    background:
+      linear-gradient(180deg, rgba(9, 12, 16, .62) 0%, rgba(9, 12, 16, .48) 55%, rgba(9, 12, 16, .78) 100%),
+      #0B0E12 url("img/hero-night.webp") center 38% / cover no-repeat;
+    color: #F2F4F6;
+  }
+  .hero { padding: 52px 0 56px; }
+  .hero-bleed .hero p.lead { color: #CBD3DA; }
+  .hero-bleed .facts { color: #B9C2CA; }
+  .hero-bleed .kicker { color: #FFB120; }
+  .hero-bleed h1 .amber { color: #FFB120; }
+  .hero-bleed .btn-wa {
+    background: rgba(255, 255, 255, .10);
+    border-color: rgba(255, 255, 255, .35);
+    color: #FFFFFF;
+    backdrop-filter: blur(4px);
+  }
+  .hero-bleed .btn-call { background: #FFB120; color: #1A1200; }
   .hero .kicker {
     display: inline-block; font-size: 12px; font-weight: 700;
     text-transform: uppercase; letter-spacing: .14em; color: var(--amber);
@@ -192,6 +210,12 @@
   }
   .zone b { display: block; font-size: 17px; margin-bottom: 4px; }
   .zone span { color: var(--ink-soft); font-size: 15px; }
+  .photo { margin: 20px 0 0; }
+  .photo img {
+    display: block; width: 100%; height: auto;
+    border-radius: 10px; border: 1px solid var(--line); box-shadow: var(--shadow);
+  }
+  .photo figcaption { margin-top: 10px; font-size: 14px; color: var(--ink-faint); }
 
   /* Шаги — реальная последовательность вызова */
   .steps { display: grid; gap: 14px; grid-template-columns: 1fr; counter-reset: step; padding: 0; margin: 0; list-style: none; }
@@ -288,8 +312,8 @@
 </header>
 
 <main>
+  <div class="hero-bleed">
   <div class="wrap">
-
     <div class="hero">
       <span class="kicker">Щучинск · Боровое · Бурабай · трасса</span>
       <h1>Эвакуатор приедет<br>за <span class="amber">20 минут</span></h1>
@@ -310,6 +334,10 @@
         <li>оплата наличными или Kaspi</li>
       </ul>
     </div>
+  </div>
+  </div>
+
+  <div class="wrap">
 
     <section id="zona" aria-labelledby="zona-h">
       <h2 id="zona-h">Куда выезжаем</h2>
@@ -319,6 +347,11 @@
         <div class="zone"><b>Боровое / Бурабай</b><span>курортная зона, санатории, озёра</span></div>
         <div class="zone"><b>Трасса А-1</b><span>Астана — Кокшетау, заберём с любого километра</span></div>
       </div>
+      <figure class="photo">
+        <img src="img/winter-rescue.webp" width="1200" height="801" loading="lazy"
+             alt="Эвакуатор вытаскивает легковой автомобиль из заснеженного кювета на трассе">
+        <figcaption>Кювет, снег, грязь — достанем и в мороз, и в буран</figcaption>
+      </figure>
     </section>
 
     <section id="ceny" aria-labelledby="ceny-h">
